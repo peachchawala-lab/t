@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1792740512762,
+      "tag": "0000_typical_lady_bullseye",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1792755773771,
+      "tag": "0001_condemned_shiva",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1792840746459,
+      "tag": "0002_busy_calypso",
+      "breakpoints": true
+    }
+  ]
+}

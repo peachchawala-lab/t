@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f3e9">
+  <meta name="description" content="ก่อนนัด ไปไหนดี? ทดลองเลือกกิจกรรมตลาดน้อยตามเวลาว่าง พร้อมแผนเดินไป–กลับ เวลาเผื่อ และราคารวม">
+  <title>เที่ยวทันใจ — ก่อนนัด ไปไหนดี?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./essentials.css">
+  <link rel="stylesheet" href="./ux.css">
+  <link rel="stylesheet" href="./layout-fixes.css">
+  <link rel="stylesheet" href="./appointment.css">
+  <link rel="stylesheet" href="./payments.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script defer src="./ux.js"></script><script defer src="./appointment-core.js"></script><script defer src="./app.js"></script><script defer src="./shop-location.js"></script><script defer src="./appointment.js"></script><script defer src="./essentials.js"></script><script defer src="./payments.js"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">ข้ามไปเนื้อหา</a>
+  <div class="demo-strip"><span class="demo-dot"></span> พื้นที่ทดลองเที่ยวทันใจ <span class="strip-divider">/</span> รายการจริงรับผ่าน QR · กิจกรรมสาธิตไม่มีการโอนเงิน</div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#discover" aria-label="เที่ยวทันใจ หน้าหลัก"><span class="brand-symbol" aria-hidden="true">ท<span>↗</span></span><span>เที่ยวทันใจ<small>THIAO THANJAI</small></span></a>
+      <nav class="main-nav" aria-label="เมนูหลัก">
+        <a href="#discover" data-nav="discover">ค้นพบกิจกรรม</a>
+        <a href="#map" data-nav="map">แผนที่ย่าน</a>
+        <a href="#bookings" data-nav="bookings">การจองของฉัน <span id="booking-count" class="nav-count">0</span></a>
+        <a href="#login" data-nav="account">เข้าสู่ระบบ</a>
+      </nav>
+      <a class="merchant-link" href="#merchant"><span aria-hidden="true">▦</span><span>หน้าร้านสาธิต</span><span aria-hidden="true">↗</span></a>
+    </div>
+    <div id="essential-nav" class="essential-nav"><a href="#saved">♡ ที่อยากไป <span id="saved-count" class="nav-count">0</span></a></div>
+  </header>
+  <main id="main" tabindex="-1"></main>
+  <footer class="site-footer"><div><a class="footer-brand" href="#discover">เที่ยวทันใจ<span>↗</span></a><p>เวลานิดเดียว ความทรงจำอีกเยอะ</p></div><div class="footer-note">ต้นแบบสำหรับทดลองแนวคิด · ตลาดน้อย กรุงเทพฯ<br>รายการที่ติดป้ายสาธิตไม่มีการโอนเงิน · รายการจริงชำระผ่าน QR บัญชีกลาง</div><div class="footer-actions"><button class="text-button" data-action="help">วิธีทดลองใช้งาน ↗</button><a class="text-button" href="/photo-credits.html">เครดิตภาพตลาดน้อย ↗</a></div></footer>
+  <dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

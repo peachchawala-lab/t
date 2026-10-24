@@ -1,0 +1,5 @@
+[functions.tt-registration]
+# Service-to-service authentication is checked in the handler using a
+# SHA-256 digest of a 256-bit credential held only in Sites secrets.
+verify_jwt = false
+entrypoint = "./functions/tt-registration/index.js"

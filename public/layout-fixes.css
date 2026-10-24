@@ -1,0 +1,129 @@
+/* Keep the enlarged type readable in forms, booking actions and merchant rows. */
+.booking-card > div,
+.detail-layout > div,
+.booking-fields > div,
+.inventory-item,
+.inventory-item > div {
+  min-width: 0;
+}
+
+.detail-form .booking-fields {
+  grid-template-columns: minmax(0, 1fr) minmax(96px, .45fr);
+  align-items: end;
+  gap: 16px;
+}
+
+.booking-fields label {
+  line-height: 1.6;
+}
+
+.booking-fields input,
+.booking-fields select {
+  min-width: 0;
+  height: 54px;
+  padding: 10px 12px;
+  line-height: 1.5;
+}
+
+.booking-capacity {
+  margin-top: 12px;
+  font-size: var(--text-small);
+  line-height: 1.8;
+  color: var(--green);
+}
+
+.booking-actions {
+  align-items: stretch;
+  gap: 12px;
+}
+
+.booking-actions > .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  max-width: 100%;
+  margin: 0;
+  padding: 12px 18px;
+  font-size: var(--text-small);
+  line-height: 1.6;
+  text-align: center;
+}
+
+.booking-actions .cancel-button {
+  color: #92442f;
+  border-color: #d6b4a6;
+}
+
+.booking-table {
+  min-width: 900px;
+  table-layout: fixed;
+}
+
+.booking-table th,
+.booking-table td {
+  padding: 16px;
+  vertical-align: top;
+  line-height: 1.7;
+}
+
+.booking-table th:nth-child(1) { width: 30%; }
+.booking-table th:nth-child(2) { width: 15%; }
+.booking-table th:nth-child(3) { width: 12%; }
+.booking-table th:nth-child(4) { width: 18%; }
+.booking-table th:nth-child(5) { width: 25%; }
+
+.booking-table .amount {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.booking-table .sub {
+  overflow-wrap: anywhere;
+}
+
+.booking-table .status {
+  white-space: normal;
+}
+
+.booking-table .row-actions {
+  align-items: stretch;
+  gap: 8px;
+}
+
+.booking-table .row-actions > .btn {
+  min-height: 48px;
+  padding: 10px 14px;
+  line-height: 1.6;
+}
+
+.table-scroll-hint {
+  display: none;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: var(--text-caption);
+  line-height: 1.8;
+}
+
+@media (max-width: 1100px) {
+  .table-scroll-hint { display: block; }
+}
+
+@media (max-width: 760px) {
+  .detail-form .booking-fields { grid-template-columns: minmax(0, 1fr); }
+  .inventory-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .booking-card .booking-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .booking-card .booking-actions > .btn {
+    min-width: 0;
+    width: 100%;
+    padding: 12px;
+  }
+  .booking-card .booking-actions > .primary { grid-column: 1 / -1; }
+}
